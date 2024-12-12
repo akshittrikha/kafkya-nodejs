@@ -8,7 +8,7 @@ async function init() {
     
     console.log('Sending message')
     await producer.send({
-        topic: 'rider-updates',
+        topic: 'rider-updates-2',
         messages: [
             {
                 key: 'location-update',

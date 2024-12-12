@@ -5,7 +5,7 @@ async function init() {
     await consumer.connect()
 
     console.log('Subscribing to the topic')
-    await consumer.subscribe({ topics: ['rider-updates'], fromBeginning: true })
+    await consumer.subscribe({ topics: ['rider-updates-2'], fromBeginning: false })
     console.log('Topic subscribed')
 
     await consumer.run({
