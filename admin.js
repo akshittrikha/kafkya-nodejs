@@ -16,17 +16,18 @@ async function init() {
             }
         ]
     })
+    console.log('Created topic: [rider-updates]')
     
     let topicList = await admin.listTopics()
     console.log('Topics: ', topicList)
     
-    console.log('Deleting topics')
-    await admin.deleteTopics({
-        topics: ['rider-updates'],
-    })
+    // console.log('Deleting topics')
+    // await admin.deleteTopics({
+    //     topics: ['rider-updates'],
+    // })
     
-    topicList = await admin.listTopics()
-    console.log('Topics: ', topicList)
+    // topicList = await admin.listTopics()
+    // console.log('Topics: ', topicList)
     
     console.log('Admin disconnecting...')
     await admin.disconnect()

@@ -1,7 +1,8 @@
 import { kafka } from './client.js'
+const group = process.argv[2]
 
 async function init() {
-    const consumer = kafka.consumer({ groupId: 'test-group' })
+    const consumer = kafka.consumer({ groupId: group })
     await consumer.connect()
 
     console.log('Subscribing to the topic')
